@@ -63,11 +63,17 @@ meses.place(x=50, y=515, width=550, height=30)
 
 #ejecucion
 def calculo():
-	sa=sueldo.get()
-	s=int(sa)
-	salarioDiario = (s)/30
+	if (sueldo.get()) == NONE:
+		messagebox.showinfo(message="INGRESE LOS DATOS FALTANTES")
+	else:
+		sa=sueldo.get()
+		s=int(sa)
+		salarioDiario = (s)/30
 
-	if (int(meses.get())) >= 1 and (int(meses.get())) <= 12:
+
+	if (int(meses.get())) == 0 and (int(meses.get())) <= 0:
+		messagebox.showinfo(message="INGRESE LOS DATOS FALTANTES")
+	elif (int(meses.get())) >= 1 and (int(meses.get())) <= 12:
 		calculoA = ((salarioDiario)*15)
 	elif (int(meses.get())) >= 12 and (int(meses.get())) <= 36:
 		calculoA = ((salarioDiario)*15)
