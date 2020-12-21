@@ -6,7 +6,7 @@ from tkinter import messagebox
 #Creación y configuración de ventana
 ventana = Tk()
 ventana.title("Asignación de Aguinaldo")
-ventana.geometry("650x650+0+0") #dimensiones
+ventana.geometry("650x650+350+0") #dimensiones
 ventana.configure(background="white")
 
 #Creamos la imagen
